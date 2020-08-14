@@ -2,7 +2,7 @@ const fs = require('fs-extra')
 
 const FILE_PATH_PART = "/data/content/shared/upload/managed_cache/MYSQL/orm_b_user_auth_action.~"
 
-let count = 1711
+let count = 25741
 let notExitFile = 0;
 let notExitFileGlobal = 0;
 let removedFiles = 0;
@@ -22,7 +22,7 @@ var startRm = function () {
       ++count
       setTimeout(function() {
         startRm()
-      }, 20)
+      }, 10)
     })
   } else {
     ++count
@@ -38,7 +38,7 @@ var startRm = function () {
       console.log('not exit cuurent', notExitFile)
       setTimeout(function() {
         startRm()
-      }, 20)
+      }, 10)
     }
   }
 }
